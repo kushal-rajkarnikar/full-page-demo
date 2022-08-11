@@ -1,0 +1,14 @@
+/*
+Theme Name: Kura
+Author: Pradeep Aryal
+Author URI: https://facebook.com/aryallpradeep
+*/
+.page-id-864 .section ul li{
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.page-id-864 .section a, .page-id-864 .section a:hover{
+	color: white;
+	text-decoration: underline;
+}

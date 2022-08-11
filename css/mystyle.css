@@ -1,0 +1,4256 @@
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('../fonts/ProximaNova-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('../fonts/ProximaNova-Bold.otf');
+}
+
+body {
+    font-family: 'Proxima Nova Regular';
+    color: #1d1d1b;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+/****** style for menu starts here ******/
+
+.menu {
+    position: fixed;
+    // margin-left: 12px;
+    left: 40px;
+    top: 60px;
+    z-index: 1;
+}
+
+.menu_icon {
+    position: relative;
+}
+
+.menu_icon img {
+    width: 100%;
+    border: 1px solid #737475;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.menu_icon figcaption {
+    color: #d2d2d4;
+    text-align: center;
+    position: absolute;
+    top: 12px;
+    left: 56px;
+    transition: color 700ms ease;
+}
+
+.menu_icon figcaption.black-text {
+    color: #1d1d1b;
+}
+
+.pageTitle {
+    position: absolute;
+    top: 144px;
+    margin-left: 15px;
+    color: #d2d2d4;
+    transition: color 700ms ease;
+}
+
+.pageTitle.black-text {
+    color: #1d1d1b;
+}
+
+#menu-accordion {
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 230px;
+}
+
+#menu-accordion a {
+    color: white;
+}
+
+#menu-accordion a:hover,
+#menu-accordion a:focus,
+#menu-accordion a:active {
+    text-decoration: none;
+}
+
+#menu-accordion .panel-default>.panel-heading {
+    background: none;
+    padding: 0;
+}
+
+#menu-accordion .panel {
+    background: none;
+    box-shadow: none;
+}
+
+#menu-accordion .panel-default {
+    border: none;
+}
+
+#menu-accordion .panel-default>.panel-heading a {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Proxima Nova Regular';
+    font-size: 18px;
+    padding-left: 0;
+    display: inline-block;
+}
+
+#menu-accordion .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border: none;
+    color: white;
+    padding-top: 5px;
+}
+
+#menu-accordion .panel-default .panel-body ul.nav>li>a {
+    color: white;
+    font-size: 16px;
+    font-family: 'Proxima Nova Regular';
+    display: inline-block;
+}
+
+#menu-accordion .panel-default .panel-body ul.nav>li>a:hover,
+#menu-accordion .panel-default .panel-body ul.nav>li>a:active,
+#menu-accordion .panel-default .panel-body ul.nav>li>a:focus {
+    background: none;
+}
+
+#menu-accordion .panel-default>.panel-heading a {
+    position: relative;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 20px;
+}
+
+#menu-accordion .panel-default>.panel-heading a::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 0px;
+    background: white;
+    top: 30px;
+    left: 20px;
+    transition: all cubic-bezier(.55, 0, .1, 1) 400ms;
+}
+
+#menu-accordion .panel-default>.panel-heading a:hover::after {
+    width: 27px;
+}
+
+#menu-accordion.panel-group .panel+.panel {
+    margin-top: 0;
+}
+
+#menu-accordion .panel-default>.panel-heading a::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    font-size: 20px;
+    left: 0px;
+    display: inline-block;
+    // font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    // font-weight: 400;
+    float: left;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: transform .25s linear;
+    -webkit-transition: -webkit-transform .25s linear;
+}
+
+#menu-accordion .panel-default>.panel-heading a[aria-expanded="false"]::before {
+    content: "+";
+}
+
+#menu-accordion .panel-default>.panel-heading a[aria-expanded="true"]::before {
+    content: "-";
+}
+
+#copyright {
+    margin-top: 60px;
+}
+
+#copyright-info {
+    color: white;
+    margin-top: 45px;
+    font-size: 13px;
+}
+
+
+/****** full page scroll custom CSS starts here ******/
+
+#fp-nav.right {
+    left: 20px;
+    left: 55px;
+    // width: 50px;
+    width: 11px;
+    height: 360px;
+    transform: translateY(43px);
+}
+
+#fp-nav ul {
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#fp-nav ul::after {
+    position: absolute;
+    left: 5px;
+    content: '';
+    height: 100%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.25);
+    top: 0;
+}
+
+#fp-nav ul.inverted-nav-dots::after {
+    background: rgba(182, 182, 182, 0.25);
+}
+
+#fp-nav ul li .fp-tooltip.right {
+    left: 20px;
+    top: 10px;
+    top: -4px;
+    width: 100px;
+    text-align: left;
+}
+
+#fp-nav ul li a+.fp-tooltip {
+    color: #8698b3;
+}
+
+#fp-nav ul li a.active+.fp-tooltip {
+    color: white;
+}
+
+#fp-nav ul li a:hover+.fp-tooltip,
+#fp-nav ul li a:focus+.fp-tooltip {
+    color: white;
+}
+
+#fp-nav ul li a+.fp-tooltip:hover {
+    color: white;
+}
+
+#fp-nav ul.inverted-nav-dots li a+.fp-tooltip {
+    color: #b6b6b6;
+}
+
+#fp-nav.fp-show-active ul.inverted-nav-dots li a.active+.fp-tooltip {
+    color: #8698b3;
+}
+
+#fp-nav ul.inverted-nav-dots li a:hover+.fp-tooltip,
+#fp-nav ul.inverted-nav-dots li a:focus+.fp-tooltip {
+    color: #8698b3;
+}
+
+#fp-nav ul.inverted-nav-dots li a+.fp-tooltip:hover {
+    color: #8698b3;
+}
+
+#fp-nav li {
+    // padding: 20px 0;
+    // margin: 0px 3px !important;
+}
+
+// #fp-nav li::after {
+// content: '';
+// position: absolute;
+// width: 1px;
+// background-color: #d2d2d4;
+// top: 0;
+// bottom: 0;
+// 	left: 50%;
+// }
+#fp-nav ul li:hover a span,
+#fp-nav ul li:focus a span,
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    background-color: #d2d2d4;
+    background-color: white;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    // background: #696d70;
+    background: #8698b3;
+    width: 11px;
+    height: 11px;
+    margin: -6px 0 0 -6px;
+}
+
+#fp-nav ul li a:hover span {
+    width: 11px !important;
+    height: 11px !important;
+    margin: -6px 0 0 -6px !important;
+}
+
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    margin: 0;
+    width: 11px;
+    height: 11px;
+}
+
+#fp-nav ul.inverted-nav-dots li a span {
+    background: #b6b6b6;
+}
+
+#fp-nav ul.inverted-nav-dots li:hover a span,
+#fp-nav ul.inverted-nav-dots li:focus a span,
+#fp-nav ul.inverted-nav-dots li a.active span {
+    background: #8698b3;
+}
+
+#fp-nav.fp-show-active a.active+.fp-tooltip {
+    width: 130px;
+}
+
+
+/****** Style for logo ******/
+
+.logo {
+    width: 110px;
+    margin-bottom: 34px;
+    display: block;
+}
+
+.logo img {
+    width: 100%;
+}
+
+
+/***** Sprite css starts here *****/
+
+.sprite {
+    background: url(../images/sprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0px 14px;
+}
+
+#facebook_sprite {
+    width: 32px;
+    height: 32px;
+    background-position: 0 0;
+    margin-left: 0;
+}
+
+#twitter_sprite {
+    width: 32px;
+    height: 32px;
+    background-position: -34px 0;
+}
+
+#google_sprite {
+    width: 32px;
+    height: 32px;
+    background-position: -68px 0;
+}
+
+#instagram_sprite {
+    width: 32px;
+    height: 32px;
+    background-position: -102px 0;
+}
+
+#linkedin_sprite {
+    width: 32px;
+    height: 32px;
+    background-position: 0 -34px;
+    margin-right: 0;
+}
+
+#down_sprite {
+    width: 40px;
+    height: 40px;
+    background-position: -34px -34px;
+    cursor: pointer;
+}
+
+#menu_sprite {
+    width: 41px;
+    height: 40px;
+    background-position: -75px -34px;
+    margin: 0;
+    margin-left: 4px;
+    cursor: pointer;
+    transition: opacity linear 700ms;
+}
+
+#menu_sprite.black-menu {
+    background-position: 0 -118px;
+}
+
+#menu_close {
+    width: 41px;
+    height: 40px;
+    background-position: -83px -76px;
+    margin: 0;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.home_page>.menu>.logo {
+    transition: opacity linear 700ms;
+    opacity: 0;
+}
+
+
+/*Style for Homepage section0: Banner*/
+
+.section {
+    background-image: url(/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/homebg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bannerHeader,
+.awards .media-heading,
+.award_modal .modal-title {
+    color: #435a7c;
+    // font-weight: bold;
+    font-family: 'Proxima Nova Bold'
+}
+
+h2.bannerHeader {
+    font-size: 36px;
+    margin-top: 50px;
+    letter-spacing: -1.3px;
+}
+
+#bannerP {
+    // font-size: 20px;
+    font-size: 24px;
+    margin-top: 20px;
+    line-height: normal;
+    color: #1d1d1b;
+    letter-spacing: -1px;
+    line-height: 30px;
+}
+
+.btn-enzyme {
+    background: none;
+    margin-top: 50px;
+    // padding: 12px 30px;
+    border-radius: 30px;
+    border-color: #435a7c;
+    color: #435a7c;
+    // font-size: 20px;
+    font-size: 24px;
+    border-width: 1px;
+    line-height: normal;
+    padding: 15px 34px;
+    letter-spacing: -0.04em;
+    transition: all ease 400ms;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 250ms;
+}
+
+// .btn-enzyme:before{
+// 	content: '';
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	background: #435a7c;
+// 	transform: translateX(-100%);
+// 	transition: all cubic-bezier(.55,0,.1,1) 0.4s;
+// 	top: 0;
+// 	left: 0;
+// }
+.btn-enzyme:hover {
+    color: white;
+    background: #435a7c;
+}
+
+// .btn-enzyme:hover:before{
+// 	transform: translateX(0%);
+// 	// background: #435a7c;
+// }
+
+/*** Style for homepage country modal ***/
+
+#country-modal .modal-content {
+    box-shadow: none;
+    border-radius: 0;
+    background: white;
+    max-width: 460px;
+    display: block;
+    margin: 0 auto;
+}
+
+#country-modal .modal-content .modal-header h4 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    font-family: 'Proxima Nova Bold';
+    letter-spacing: -1.3px;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    line-height: normal;
+}
+
+#country-modal .modal-content .modal-header {
+    border: none;
+    padding-top: 21px;
+    padding-bottom: 0;
+}
+
+#country-modal .modal-body {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#country-modal .btn-enzyme {
+    width: 100%;
+    max-width: 272px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+#country-modal .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+}
+
+
+/* Style for homepage second section: Section 1 */
+
+.home_page #section1 {
+    background-image: url(/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/section1bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Style for homepage third section: Section 2 */
+
+.home_page #section2 {
+    background-image: url(/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/section2bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/****** style for footer arrow ******/
+
+footer.arrow {
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+}
+
+footer.arrow .menu_icon {
+    text-align: center;
+}
+
+
+/****** ABOUT PAGE CSS STARTS HERE ******/
+
+
+/*About Page section 1*/
+
+.about_page #fp-nav ul {
+    margin-top: 146px;
+}
+
+.aboutContent h2 {
+    margin-top: 10px;
+    font-size: 36px;
+}
+
+.aboutContent p {
+    // font-size: 15px;
+    font-size: 16px;
+    color: #1d1d1b;
+    margin: 30px auto;
+    /*		padding: 0 62px;*/
+}
+
+#videoModal .modal-dialog {
+    top: 80px;
+}
+
+.videoModal {
+    z-index: 2000;
+}
+
+.videoplayer {
+    /*		max-width: 540px;*/
+    width: 100%;
+    margin: 10px auto 0 auto;
+    cursor: pointer;
+}
+
+.videoplayer img {
+    width: 100%;
+    transition: all ease 250ms;
+}
+
+.videoplayer:hover img {
+    -webkit-filter: contrast(110%);
+    filter: contrast(110%);
+}
+
+
+/* video css */
+
+.videoModal .close {
+    position: absolute;
+    left: -15px;
+    top: 27px;
+    background-color: white;
+    padding: 5px;
+    opacity: 1;
+}
+
+div.videoModal .modal-content {
+    background: none;
+    border: none;
+    box-shadow: none;
+    /*z-index: 100px;*/
+}
+
+
+/* About page section 2: Team*/
+
+.team_carousel ul {
+    padding: 0;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team_members {
+    margin-top: 5px;
+    height: 580px;
+}
+
+.team_members ul {
+    padding: 0 60px;
+}
+
+.team_carousel li,
+.news li {
+    display: inline-block;
+    /*width: 170px;*/
+    margin-bottom: 25px;
+}
+
+.news li {
+    margin-bottom: 52px;
+}
+
+.team_carousel li {
+    /*width: calc(33.33% - 60px);*/
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.team-carousel li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.team-carousel li:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.team_carousel .team_advisors li {
+    // width: calc(50% - 76px);
+    margin-left: 38px;
+    margin-right: 38px;
+}
+
+
+/*
+	.team_advisors li:nth-child(even) {
+		margin-right: 0;
+	}
+*/
+
+.team_position {
+    margin-left: 30px;
+}
+
+.team h3,
+.team_position {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 5px;
+    word-wrap: break-word;
+}
+
+.team,
+.news_content {
+    position: relative;
+}
+
+.team img,
+.news_content img {
+    width: 100%;
+}
+
+.team img {
+    height: auto;
+}
+
+.team figcaption,
+.news_content figcaption {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    bottom: -21px;
+    left: 20%;
+    padding: 5px 10px;
+    color: #405a7b;
+    // font-weight: bold;
+    // font-size: 15px;
+    font-family: 'Proxima Nova Bold';
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+.team figcaption span {
+    font-size: 16px;
+    color: #1d1d1b;
+    font-family: 'Proxima Nova Regular';
+}
+
+.team {
+    cursor: pointer;
+}
+
+.fp-slidesNav.bottom {
+    width: 100%;
+    text-align: center;
+}
+
+.fp-slidesNav.bottom ul:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: #8698b3;
+    top: 11px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 32%;
+}
+
+.application_center_page #section0 .fp-slidesNav.bottom ul::after {
+    width: 48%;
+}
+
+.about_page #section2 .fp-slidesNav.bottom li {
+    padding: 3px 40px;
+}
+
+.fp-slidesNav ul li {
+    margin: 0;
+    padding: 3px 115px;
+}
+
+.fp-slidesNav ul li a {
+    margin-top: 3px;
+}
+
+.fp-slidesNav ul li a.active span {
+    background-color: #435a7c;
+}
+
+.fp-slidesNav ul li a span {
+    background-color: #8698b3;
+}
+
+.fp-slidesNav.bottom li::after {
+    /*content: '';
+		position: absolute;
+		height: 1px;
+		background-color: #8698b3;
+		top: 10px;
+		bottom: 0;
+		left: 120px;
+		width: 100%;*/
+}
+
+.fp-slidesNav.bottom li:last-child::after {
+    display: none;
+}
+
+.team_visit li {
+    /*width: calc(50% - 140px);
+		margin-left: 110px;*/
+    margin-right: 30px;
+}
+
+.team_visit li:nth-child(even) {
+    /*margin-right: 110px;*/
+    margin-left: 30px;
+}
+
+
+/*team pop up/modall css starts here*/
+
+.team_modal,
+.advisors_modal {
+    position: absolute;
+}
+
+.team_modal .fade,
+.advisors_modal .fade,
+{
+    background-color: rgba(67, 90, 124, 0.5);
+}
+
+.team_modal .modal-content,
+.advisors_modal .modal-content {
+    background: none;
+    border: none;
+    box-shadow: none;
+    width: 80%;
+}
+
+.team_modal .close,
+.advisors_modal .close {
+    float: left;
+    background-color: white;
+    padding: 5px;
+    opacity: 1;
+}
+
+.team_modal .modal-header,
+.advisors_modal .modal-header {
+    border: none;
+}
+
+.team_modal .team_image,
+.advisors_modal .team_image {
+    position: absolute;
+    left: 45px;
+    top: 13px;
+}
+
+.team_modal .modal-body,
+.advisors_modal .modal-body {
+    background-color: white;
+    top: 170px;
+    left: 20%;
+    height: 290px;
+}
+
+.team_modal .modal-body h3,
+.advisors_modal .modal-body h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.team_modal .modal-body h3 {
+    margin-bottom: 0;
+}
+
+.team_modal .modal-body h3+div {
+    margin-bottom: 10px;
+}
+
+
+/*About page section 3: History style starts here*/
+
+.history {
+    text-align: center;
+    position: relative;
+}
+
+.history .slide-component h1 {
+    // font-size: 260px;
+    // font-weight: bold;
+    font-family: 'Proxima Nova Bold';
+    font-size: 290px;
+    // color: #d2d2d4;
+    color: rgba(67, 90, 124, 0.15);
+    // opacity: 0.5;
+    /*margin-top: 2px;
+		position: absolute;
+		bottom: -100px;*/
+}
+
+.history .slide-component p {
+    background: white;
+    padding: 10px;
+    color: #435a7c;
+    // font-weight: bold;
+    // font-size: 20px;
+    font-family: 'Proxima Nova Bold';
+    font-size: 24px;
+    text-align: left;
+    /*margin: 0 44px;*/
+    /*position: absolute;
+		bottom: 180px;*/
+    max-width: 632px;
+    display: block;
+    margin: 0 auto;
+}
+
+.about_page #section2 .fp-slidesNav.bottom {
+    bottom: 17px;
+    left: 0;
+    margin-left: 0 !important;
+}
+
+
+/* About page section 4: Awards style starts here*/
+
+.awards .media {
+    background: white;
+    margin: 0 15px;
+    /*margin-bottom: 15px;*/
+    margin-bottom: 0px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.award_logo {
+    width: 100px;
+    text-align: center;
+}
+
+.awards .media-body {
+    vertical-align: middle;
+    padding: 5px 20px;
+}
+
+.awards .media-body h4 {
+    // font-size: 18px;
+    font-size: 24px;
+}
+
+.awards .media-body h4.media-heading {
+    margin-bottom: 0;
+}
+
+.awards .media-body p {
+    // font-size: 14px;
+    font-size: 16px;
+}
+
+.award_modal {
+    margin-top: 90px;
+}
+
+.award_modal .modal-content {
+    padding: 30px 15px;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.award_modal .close {
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+.award_modal .modal-header {
+    border: none;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.award_modal .modal-header img {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+}
+
+.award_modal .modal-dialogue {
+    width: 500px;
+}
+
+
+/* about page section 5: R&D and innovation style starts here*/
+
+.about_page .mCustomScrollbar {
+    height: 380px;
+}
+
+.about_page .vertical-scroll .mCSB_scrollTools {
+    right: 45px;
+    height: 70%;
+    top: 15%;
+}
+
+.about_page .news .vertical-scroll .mCSB_scrollTools {
+    right: 15px;
+}
+
+.team_modal .vertical-scroll .mCSB_scrollTools,
+.advisors_modal .vertical-scroll .mCSB_scrollTools {
+    height: 70%;
+    top: 15%;
+}
+
+.about_page .mCSB_scrollTools .mCSB_draggerRail,
+.team_modal .mCSB_scrollTools .mCSB_draggerRail,
+.advisors_modal .mCSB_scrollTools .mCSB_draggerRail {
+    width: 8px;
+    background-color: #8698b3;
+    border-radius: 0;
+}
+
+.about_page .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.team_modal .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.advisors_modal .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #435a7c;
+    width: 8px;
+    border-radius: 0;
+}
+
+.about_page .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover,
+.about_page .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:focus {
+    background-color: #435a7c;
+    border-radius: 0;
+}
+
+.innovation_content {
+    background-color: white;
+    padding: 30px;
+    padding-right: 45px;
+}
+
+.innovation_content h4,
+.social_responsibility h4 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+
+/* About page section 6: social Responsibility style starts here*/
+
+.social_responsibility .mCustomScrollbar {
+    height: 300px;
+}
+
+.social_responsibility .col-md-6 {
+    z-index: 10;
+}
+
+.social_image {
+    margin-left: -30%;
+    margin-top: -20%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+/* About page section 7: news style starts here*/
+
+.news #mCSB_5 {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.news ul {
+    white-space: nowrap;
+    grid-row-gap: 15px;
+    margin-bottom: 20px;
+}
+
+.news li {
+    width: 300px;
+    margin-left: 60px;
+    vertical-align: top;
+}
+
+.news li:nth-child(1) {
+    margin-left: 0;
+}
+
+.news_content {
+    margin-bottom: 30px;
+    white-space: normal;
+}
+
+.news_content figcaption {
+    width: 100%;
+    text-align: left;
+    left: 30px;
+}
+
+.news .horizontal_scrollbar {
+    width: 100%;
+    overflow-x: auto;
+    margin-left: 30px;
+}
+
+.news .mCustomScrollbar {
+    height: 632px;
+}
+
+
+/*News scroll starts here*/
+
+.news .mCSB_scrollTools .mCSB_draggerRail {
+    width: 8px;
+    border-radius: 0;
+}
+
+.news .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 8px;
+    border-radius: 0;
+    margin-top: 7px;
+}
+
+.news .mCSB_scrollTools .mCSB_draggerContainer {}
+
+.news .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    bottom: 30px;
+}
+
+
+/*news popup/modal css starts here*/
+
+#newsModal .modal-dialog {
+    width: 70%;
+}
+
+#newsModal .modal-content {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+#newsModal .modal-header {
+    width: 50%;
+    border: none;
+}
+
+#newsModal .modal-header img {
+    width: 100%;
+}
+
+#newsModal .modal-body {
+    position: absolute;
+    top: 100px;
+    left: 40%;
+    background-color: white;
+    height: 300px;
+    padding: 30px;
+}
+
+#newsModal .modal-body p {
+    padding: 0;
+    margin-top: 20px;
+}
+
+
+/****** Contact page style starts here ******/
+
+
+/*Contact page section 1: contacts*/
+
+.contact_page .section {
+    background: url(/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/contactbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact_info {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-bottom: 16px;
+    // max-height: 555px;
+}
+
+
+/* contact form */
+
+.contact_info .form-group {
+    margin-bottom: 36px;
+}
+
+.contact_info h6,
+.contact_info form label,
+{
+    color: #b3c9eb;
+    text-transform: uppercase;
+    // font-size: 12px;
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.contact_info p,
+.contact_info form input {
+    color: white;
+    // font-size: 14px;
+    font-size: 20px;
+    // font-weight: bold;
+    font-family: 'Proxima Nova Bold';
+    margin: 0;
+}
+
+.contact_form {
+    margin-bottom: 0px;
+}
+
+.contact_info form .btn-enzyme {
+    border: 1px solid white;
+    padding: 6px 20px;
+    font-size: 12px;
+    color: white;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+.contact_info form input,
+.contact_info form textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #9a9c9c;
+    border-radius: 0;
+    padding: 0;
+}
+
+.contact_info form .form-control:focus {
+    border: none;
+    border-bottom: 1px solid #9a9c9c;
+    box-shadow: none;
+}
+
+.contact_info form textarea {
+    width: 100%;
+    resize: none;
+    overflow: hidden;
+}
+
+.contact_icons {
+    margin-bottom: 0px;
+}
+
+
+/* Contact page section 2: Distributers starts here */
+
+.distributors,
+.conference {
+    background: white;
+}
+
+.distributors {
+    display: block;
+    width: 100%;
+    max-width: 410px;
+    margin: 0 auto;
+}
+
+.distributors li {
+    display: block;
+    border-bottom: 1px solid #c6c6c6;
+    position: relative;
+    padding: 30px;
+}
+
+.distributors li img {
+    position: absolute;
+    left: 0;
+}
+
+.distributors li h4 {
+    /*		padding-left: 190px;*/
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: -1.3px;
+}
+
+
+/* Contact page section 3: Conference starts here */
+
+.conference {
+    padding: 20px;
+    min-height: 280px;
+}
+
+.conference_img {
+    margin: 20px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conference h4 {
+    margin-top: 20px;
+}
+
+
+/*** arrows for team and history arrows ***/
+
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev {
+    border: none;
+}
+
+.fp-controlArrow.fp-prev,
+.fp-controlArrow.fp-next {
+    // background: url('/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/down_arrow.png') center center no-repeat;
+    background: url('/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/sprite.png') no-repeat;
+    background-position: 0 0;
+    // background-size: cover;
+    width: 40px;
+    height: 40px;
+    // border: 1px solid white;
+    // border-radius: 50%;
+}
+
+.fp-controlArrow.fp-prev {
+    background-position: 0px -76px;
+}
+
+.fp-controlArrow.fp-next {
+    background-position: -42px -76px;
+}
+
+// .fp-controlArrow.fp-next{
+// 	-webkit-transform: rotate(-90deg);
+// 	transform: rotate(-90deg);
+// }
+// .fp-controlArrow.fp-prev{
+// 	-webkit-transform: rotate(90deg);
+// 	transform: rotate(90deg);
+// }
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background: none;
+}
+
+.navbar-toggle#menu_sprite {
+    float: none;
+    margin: 0;
+}
+
+#kura-navbar {
+    position: absolute;
+    height: 100%;
+    border: none;
+    background: #435a7c;
+    z-index: 101;
+}
+
+
+/* Tools & Information: LOT style */
+
+.tools .mCustomScrollbar {
+    width: 80%;
+    margin: 0 auto;
+    /*height: 514px;*/
+    height: 478px;
+}
+
+.tools .vertical-scroll .mCSB_scrollTools {
+    right: 0;
+    height: auto;
+    top: 28px;
+}
+
+.tools .tool_table .tablepress {
+    border-collapse: separate;
+    border-spacing: 40px 30px;
+}
+
+.tools .tool_table .tablepress td,
+.tools .tool_table .tablepress th {
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tools .tool_table .tablepress tr.even td {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #1d1d1b;
+}
+
+.tools .tool_table .tablepress tr.odd td {
+    background-color: rgba(132, 175, 89, 0.75);
+    border: none;
+    color: #1d1d1b;
+}
+
+.tools .tool_table .tablepress td:last-child {
+    background-color: #00485d !important;
+}
+
+.tools .tool_table .tablepress th {
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    color: #1d1d1b;
+    font-family: 'Proxima Nova Bold';
+}
+
+.tools .tool_table .tablepress .table tr:first-child {
+    border-top: 0;
+}
+
+.tools .tablepress .sorting:after,
+.tools .tablepress .sorting_asc:after,
+.tools .tablepress .sorting_desc:after {
+    display: none;
+}
+
+.tools .mCustomScrollbar .dataTables_length,
+.tools .mCustomScrollbar .dataTables_info,
+.tools .mCustomScrollbar .dataTables_paginate {
+    display: none;
+}
+
+.tools .dataTables_wrapper .dataTables_filter input {
+    background: #00485d;
+    color: white;
+    border: none;
+    box-shadow: none;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#tablepress-8_filter label {
+    color: black;
+}
+
+// .tools  .mCustomScrollbar .dataTables_filter,
+.retest {
+    height: 100% !important;
+}
+
+
+/*flag Sprite*/
+
+.flag_icons,
+.flag_icon {
+    background: url(/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/flag_icons.png);
+    background-repeat: no-repeat;
+    height: 48px;
+    width: 48px;
+}
+
+#aus_flag {
+    background-position: 0 0;
+}
+
+#brazil_flag {
+    background-position: -50px 0;
+}
+
+#canada_flag {
+    background-position: -100px 0;
+}
+
+#china_flag {
+    background-position: -150px 0;
+}
+
+#den_flag {
+    background-position: 0px -50px;
+}
+
+#euro_flag {
+    background-position: -50px -50px;
+}
+
+#germany_flag {
+    background-position: -100px -50px;
+}
+
+#israel_flag {
+    background-position: -150px -50px;
+}
+
+#jordan_flag {
+    background-position: -0px -100px;
+}
+
+#new_flag {
+    background-position: -50px -100px;
+}
+
+#norway_flag {
+    background-position: -100px -100px;
+}
+
+#suecia_flag {
+    background-position: -150px -100px;
+}
+
+#uk_flag {
+    background-position: 0 -150px;
+}
+
+#uruguay_flag {
+    background-position: -50px -150px;
+}
+
+#usa_flag {
+    background-position: -100px -150px;
+}
+
+.download_icon {
+    background-position: -162px -163px;
+    height: 22px;
+    width: 24px;
+    margin: 0 auto;
+}
+
+
+/* Tools & Information: MSDSstyle */
+
+.msds .vertical-scroll {
+    height: 362px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.msds .vertical-scroll .mCSB_scrollTools {
+    right: 0;
+    height: 100%;
+    top: 0;
+}
+
+.msds .panel-group {
+    position: relative;
+    /*margin-top: 30px;*/
+    margin-left: 60px;
+}
+
+.msds .panel-group .panel {
+    background: none;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.msds .panel-heading {
+    /*width: calc(100% - 30px);*/
+    width: 100%;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.msds .panel-heading h4 {
+    padding-left: 40px;
+    text-align: left;
+}
+
+.msds .panel-title a {
+    padding: 10px 20px;
+}
+
+.msds .panel-title a div {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+
+.msds .panel-heading button {
+    font-size: 14px;
+    margin: 0;
+    padding: 3px 25px;
+    border: 1px solid;
+    position: absolute;
+    right: 15px;
+    top: 17px;
+}
+
+.msds .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border: none;
+    background: #054779;
+}
+
+.msds .panel-collapse {
+    padding-left: 30px;
+    transform: translateY(-20px);
+    position: relative;
+    z-index: 0;
+}
+
+.msds .panel-body .pdf_body {
+    padding: 15px 5px;
+}
+
+.msds .panel-body li {
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.msds .panel-body li:nth-child(odd) {
+    margin-right: 2%;
+}
+
+.msds .panel-body li span {
+    color: white;
+}
+
+.msds .panel-body li p {
+    padding-right: 10px;
+    color: white;
+    display: inline;
+}
+
+
+/*.msds .panel-default>.panel-heading{
+	position: absolute;
+    z-index: 10;
+    width: 100%;
+    margin-top: 0;
+    transition: all ease 250ms;
+}
+
+.msds .panel-default>.panel-heading.absolute-position{
+	position: absolute;
+}
+
+.msds .panel-group{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.msds .panel-group .panel{
+	width: 100%;
+	min-height: 80px;
+}
+
+.msds .collapse{
+	padding-top: 60px;
+	transform: translateX(60px);
+	position: absolute;
+	width: 100%;
+}
+
+.msds .collapse.in ul{
+	margin-top: 30px;
+}
+
+.msds .panel.panel-default{
+	transition: height ease 250ms;
+}
+*/
+
+
+/* Tools & Information: FAQs style*/
+
+.tools .section {
+    background: url(/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/toolbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*
+.tools span.wpcf7-not-valid-tip {
+	position: absolute;
+	width: 130px;
+	top: 5px;
+}
+*/
+
+.tools div.wpcf7-validation-errors {
+    border: none;
+    /*
+	color: #f7e700;
+	margin: 0;
+	padding: 5px;
+*/
+}
+
+.faqs li {
+    display: inline;
+}
+
+.faqs_content {
+    position: relative;
+    cursor: pointer;
+}
+
+.faqs_content span {
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.faqs .panel-group .panel {
+    margin: 15px;
+    border-radius: 0;
+    background: none;
+    border: none;
+}
+
+.panel-default>.panel-heading {
+    background-color: #fff;
+    padding: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.faqs .panel-default>.panel-heading {
+    background-color: white;
+    padding: 0;
+    border-radius: 0;
+}
+
+.panel-default>.panel-heading a {
+    display: block;
+    /*padding: 12px 20px;*/
+    padding: 15px;
+    text-align: left;
+    padding-left: 40px;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.faqs .panel-default>.panel-heading a:after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 7px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    float: left;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: transform .25s linear;
+    -webkit-transition: -webkit-transform .25s linear;
+}
+
+.faqs .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border: none;
+    background: white;
+    // margin-top: 15px;
+    text-align: left;
+    color: #1d1d1b;
+}
+
+.faqs .panel-default>.panel-heading a[aria-expanded="true"] {
+    background-color: #435a7c;
+    ;
+    color: white;
+}
+
+.faqs .panel-default>.panel-heading a[aria-expanded="true"]:after {
+    content: "\2212";
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    color: white;
+}
+
+.faqs .panel-default>.panel-heading a[aria-expanded="false"]:after {
+    content: "\002b";
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.accordion-option {
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 15px 0;
+}
+
+.accordion-option .title {
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-option .toggle-accordion {
+    float: right;
+    font-size: 16px;
+    color: #6a6c6f;
+}
+
+
+/***Coming soon ***/
+
+.coming-soon {
+    font-family: 'Proxima Nova Bold';
+    font-size: 24px;
+    color: #435a7c;
+    background: white;
+    width: 211px;
+    text-align: center;
+    letter-spacing: -1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    right: 65px;
+    bottom: -20px;
+}
+
+
+/*@media (min-width: 768px) {
+	.collapse {
+		display: none !important;
+	}
+	}*/
+
+#kura-navbar {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 1;
+    border-radius: 0;
+    -webkit-transition: all cubic-bezier(.55, 0, .1, 1) 0.4s;
+    transition: all cubic-bezier(.55, 0, .1, 1) 0.4s;
+    min-width: 335px;
+    width: 23%;
+    overflow-y: auto;
+}
+
+#kura-navbar.open {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+#kura-navbar .menu {
+    margin-left: 0;
+}
+
+#kura-navbar .menu .pageTitle {
+    display: none;
+}
+
+.overlay {
+    background: rgba(67, 90, 124, 0.5);
+    opacity: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    transition: all ease 0.4s;
+}
+
+.overlay.open {
+    z-index: 100;
+    opacity: 1;
+}
+
+#kura-navbar .navbar-nav {
+    margin-top: 220px;
+}
+
+#kura-navbar .navbar-nav>li {
+    display: block;
+    float: none;
+}
+
+#kura-navbar .navbar-nav>li a {
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#kura-navbar .navbar-nav>li a:hover {
+    color: white;
+}
+
+
+/*** application center ***/
+
+.application_center_page h4 {
+    font-size: 24px;
+    color: #1d1d1b;
+    font-family: 'Proxima Nova Bold';
+    margin-bottom: 32px;
+}
+
+.application_center_page h4.panel-title {
+    margin-bottom: 0;
+}
+
+.select-block {
+    background: #435a7c;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    color: white;
+    font-family: 'Proxima Nova Bold';
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 28px;
+    height: 315px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+/*** ****/
+
+#application-center-tab-content .tab-pane {
+    padding-top: 30px;
+}
+
+#application-center-tab-content .nav-tabs>li>a {
+    color: #8698b3;
+    border-radius: 0;
+}
+
+#application-center-tab-content .nav-tabs>li.active>a,
+#application-center-tab-content .nav-tabs>li.active>a:focus,
+#application-center-tab-content .nav-tabs>li.active>a:hover {
+    color: #435a7c;
+}
+
+.form-control.application-center-dropdown.selectBox-dropdown {
+    box-shadow: none;
+    border-radius: 0;
+    background: #869ab5;
+    border: 1px solid #1a1a1a;
+    color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 20px;
+    height: auto;
+    max-width: 436px;
+    width: 100%;
+    margin-bottom: 28px;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.form-control.application-center-dropdown.selectBox-dropdown .selectBox-arrow {
+    border: none;
+}
+
+.form-control-selectBox-dropdown-menu li a {
+    padding: 20px;
+    background: #435a7c;
+    color: white;
+    cursor: pointer;
+}
+
+.form-control-selectBox-dropdown-menu li a:hover {
+    text-decoration: none;
+    background: #869ab5;
+}
+
+.form-control-selectBox-dropdown-menu li.selectBox-selected a {
+    background: #435a7c;
+}
+
+.form-control-selectBox-dropdown-menu li.selectBox-selected a:hover {
+    background: #869ab5;
+}
+
+.selectBox-dropdown-menu {
+    max-height: 427px;
+    border: 1px solid #1a1a1a;
+}
+
+.selectBox-dropdown .selectBox-label {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.selectBox-dropdown .selectBox-arrow {
+    background: url('/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/sprite.png') 50% center no-repeat;
+    background-position: -52px -134px;
+    width: 20px;
+    height: 11px;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    // background-position:
+}
+
+// .application-center-dropdown{
+// 	padding: 20px;
+// 	background: #435a7c;
+// 	color: white;
+// 	-webkit-appearance: none;
+// 	-moz-appearance: none;
+// 	border-radius: 0;
+// }
+
+/*** all resrouces section of application center ***/
+
+.nav-tabs>li>a.category {
+    background: #8698b3;
+    color: white;
+    font-size: 13px;
+    border-radius: 30px;
+    padding: 8px 20px;
+    display: inline-block;
+    cursor: pointer;
+    float: left;
+    margin-right: 9px;
+    font-family: 'Proxima Nova Bold';
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+}
+
+.nav-tabs.no-border {
+    border: none;
+}
+
+.nav-tabs>li.active>a.category {
+    background: #4d6283;
+    border: none;
+    color: white;
+}
+
+.nav-tabs>li>a.category:hover {
+    background: #4d6283;
+}
+
+.pdf-block-wrapper {
+    display: -webkit-flex;
+    display: flex;
+    clear: both;
+    // padding-top: 30px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pdf-block-wrapper .col-sm-4 {
+    margin-bottom: 30px;
+}
+
+a.pdf-block {
+    background: #ebebeb;
+    color: #1d1d1b;
+    font-size: 13px;
+    height: 100%;
+    padding: 22px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+#pdf-modal .modal-body {
+    padding: 0;
+}
+
+#pdf-modal .modal-content {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+#pdf-modal iframe {
+    border: none;
+}
+
+.modal-backdrop {
+    background: rgba(67, 90, 124, 0.75);
+}
+
+
+/*** Enzyme Store ***/
+
+
+/*News scroll starts here*/
+
+.enzyme_store_page .mCSB_scrollTools .mCSB_draggerRail {
+    /*
+		width: 100%;
+		height: 8px;
+*/
+    width: 8px;
+    background: #435a7c;
+    background: #8698b3;
+    border-radius: 0;
+}
+
+.enzyme_store_page .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: #435a7c;
+    width: 8px;
+    /*
+		width: 100%;
+		height: 8px;
+*/
+    border-radius: 0;
+}
+
+.enzyme_selector_page .mCSB_scrollTools .mCSB_draggerRail {
+    width: 8px;
+    background: #8698b3;
+    border-radius: 0;
+}
+
+.enzyme_selector_page .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: #435a7c;
+    width: 8px;
+    border-radius: 0;
+}
+
+.enzyme_store_pages .mCSB_scrollTools .mCSB_draggerContainer {
+    // left: 40px;
+}
+
+.enzyme_store_page .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    // bottom: 30px;
+}
+
+.enzyme-block {
+    padding: 30px;
+    color: white;
+    margin-bottom: 30px;
+    color: white;
+    display: block;
+    position: relative;
+    width: 380px;
+    display: inline-block;
+}
+
+.list-row .col-sm-8 {
+    width: 100%;
+    max-width: 790px;
+}
+
+.list-row .col-sm-8 .col-sm-6 {
+    position: relative;
+}
+
+.enzyme-block:hover,
+.enzyme-block:focus,
+.enzyme-block:active {
+    color: white;
+    text-decoration: none;
+}
+
+.enzyme-block .enzyme-name {
+    font-size: 24px;
+    font-family: 'Proxima Nova Bold';
+    margin-bottom: 10px;
+    white-space: normal;
+}
+
+.enzyme-block .cas-number {
+    font-size: 13px;
+    margin-top: 15px;
+    white-space: normal;
+}
+
+.enzyme-block .short-description,
+.enzyme-block .temperature {
+    font-size: 16px;
+    white-space: normal;
+}
+
+.enzyme-block+.btn-buy {
+    width: 130px;
+    position: absolute;
+    padding: 8px 40px;
+    bottom: -21px;
+    right: 45px;
+    font-size: 20px;
+    font-family: 'Proxima Nova Bold';
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    color: white;
+    border-radius: 0;
+    height: 42px;
+    bottom: 10px;
+}
+
+.enzyme-block+.btn-buy+.btn-buy-bg {
+    position: absolute;
+    content: '';
+    width: 130px;
+    padding: 15px 40px;
+    bottom: -21px;
+    right: 45px;
+    height: 42px;
+    bottom: 10px;
+    z-index: 0;
+}
+
+.enzyme-store-row {
+    /*
+		overflow-x: auto;
+		white-space: nowrap;
+*/
+}
+
+.enzyme-store-row .col-sm-6 {
+    display: inline-block;
+    // max-width: 430px;
+    // padding: 0;
+    // margin-right: 30px;
+}
+
+.enzyme-store-row .col-sm-6 .enzyme-block {
+    white-space: normal;
+    max-width: 380px;
+}
+
+.enzyme_selector_page .enzyme-block {
+    max-width: unset;
+    /*        width: 100%;*/
+}
+
+.enzyme_selector_page .enzyme-block-clickable .enzyme-block {
+    width: 100%;
+}
+
+.enzyme_selector_page .form-control.application-center-dropdown.selectBox-dropdown {
+    max-width: unset;
+}
+
+
+/*** Enzyme Individual Page ***/
+
+.fp-slidesNav.white-nav-dots ul li a.active span {
+    background: white;
+}
+
+.fp-slidesNav.white-nav-dots ul li a:hover span {
+    background: white;
+}
+
+.overview-slides {
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.overview-slides h4 {
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.overview-slides p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.overview-slide {
+    max-width: 600px;
+    border: 1px solid white;
+    padding: 36px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+/*** enzyme selector page ***/
+
+.enzyme_selector_page h4 {
+    font-size: 24px;
+    color: #435a7c;
+    font-family: 'Proxima Nova Bold';
+    margin-bottom: 0;
+}
+
+.enzyme_selector_page {
+    font-size: 16px;
+    color: #1d1d1b;
+}
+
+.enzyme-selector-container {
+    height: 75%;
+}
+
+.no-validated-methods-message {
+    background: #435a7c;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px;
+    margin-top: 22px;
+}
+
+.no-validated-methods-message p {
+    margin: 0;
+}
+
+.enzyme-selector-container h5 {
+    font-size: 18px;
+    font-family: 'Proxima Nova Bold';
+    color: #435a7c;
+    font-weight: normal;
+    margin-top: 30px;
+}
+
+.enzyme-selector-container .enzyme-block {
+    padding: 20px 15px;
+    margin-bottom: 0;
+}
+
+.enzyme-selector-container .enzyme-block .enzyme-name {
+    margin-bottom: 0;
+}
+
+.enzyme-selector-container .also-suitable {
+    background: #e5e5e5;
+    font-size: 16px;
+    /*color: #1d1d1b;*/
+    color: white;
+    display: block;
+    padding: 15px;
+    cursor: pointer;
+    /*        margin-bottom: 15px;*/
+}
+
+.enzyme-selector-container .also-suitable:hover {
+    text-decoration: none;
+}
+
+.enzyme-selector-container .also-suitable .enzyme-name {
+    font-size: 20px;
+    /*color: black;*/
+    color: white;
+    font-family: 'Proxima Nova Bold';
+}
+
+.enzyme-selector-container .also-suitable .short-description {
+    display: none;
+}
+
+.enzyme-selector-container .recommended-enzyme .also-suitable .short-description {
+    display: block;
+}
+
+.also-suitable-wrapper .enzyme-block .short-description {
+    display: none;
+}
+
+.also-suitable-wrapper .enzyme-block {
+    min-width: unset;
+    width: 100%;
+}
+
+.gutter-6>.row {
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.gutter-6>.row>[class*="col-"] {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.enzyme-block-btn {
+    color: white;
+    display: block;
+    margin-top: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    /*		margin-right: 15px;*/
+}
+
+.enzyme-block-btn:hover,
+.enzyme-block-btn:focus,
+.enzyme-block-btn:active {
+    text-decoration: none;
+    color: white;
+}
+
+#email-modal .modal-content,
+#email-modal2 .modal-content {
+    box-shadow: none;
+    border-radius: 0;
+    background: white;
+    max-width: 460px;
+    display: block;
+    margin: 0 auto;
+}
+
+#email-modal .modal-content .modal-header h4,
+#email-modal2 .modal-content .modal-header h4 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    font-family: 'Proxima Nova Bold';
+    letter-spacing: -1.3px;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    line-height: normal;
+}
+
+#email-modal .modal-content .modal-header,
+#email-modal2 .modal-content .modal-header {
+    border: none;
+    padding-top: 21px;
+    padding-bottom: 0;
+}
+
+#email-modal .modal-body,
+#email-modal2 .modal-body {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#email-modal .btn-enzyme,
+#email-modal2 .btn-enzyme {
+    width: 100%;
+    max-width: 272px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-top: 20px;
+}
+
+#email-modal .modal-dialog,
+#email-modal2 .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+}
+
+#email-modal input.form-control,
+#email-modal2 input.form-control {
+    box-shadow: none;
+    border-radius: 0;
+    border-color: #1d1d1b;
+    font-size: 20px;
+    font-family: 'Proxima Nova Bold';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #1d1d1b;
+    width: 100%;
+}
+
+#email-modal2 .modal-body label {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.page-template-tpl_page-php .page {
+    color: white;
+}
+
+.page-template-tpl_page-php .page #fullpage p {
+    font-size: 13px;
+    line-height: 20px;
+    // margin-bottom: 36px;
+}
+
+.page-template-tpl_page-php .page #fullpage h4 {
+    font-family: 'Proxima Nova Bold';
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-template-tpl_page-php .page #fullpage .terms-title {
+    font-size: 16px;
+    font-family: 'Proxima Nova Bold';
+    margin-bottom: 15px;
+}
+
+#kura-navbar.white-bg {
+    background: white;
+}
+
+.page-template-tpl_page-php .page #menu-accordion .panel-default>.panel-heading a {
+    color: rgb(67, 90, 124);
+}
+
+.page-template-tpl_page-php .page #menu-accordion .panel-default .panel-body ul.nav>li>a {
+    color: rgb(67, 90, 124);
+}
+
+.page-template-tpl_page-php .page #kura-navbar .menu_icon figcaption {
+    color: #1d1d1b;
+}
+
+.page-template-tpl_page-php .page #kura-navbar .menu_icon #menu_close {
+    background-position: -84px -118px;
+}
+
+
+/*.page .vertical-scroll{
+    height: calc(100% - 60px);
+    }*/
+
+
+/*.page .section{
+    padding-top: 100px;
+    }*/
+
+#menu-accordion overflow-y: auto;
+
+}
+#kura-navbar.white-bg #copyright-info {
+    color: rgb(67, 90, 124);
+}
+.page-template-tpl_enzyme_individual .application_center_page h4 {
+    color: white;
+}
+.news_content {
+    cursor: pointer;
+}
+.team_carousel li {
+    margin-bottom: 50px;
+}
+.team h3 {
+    display: none;
+}
+.vertical-scroll {
+    transition: height cubic-bezier(.55, 0, .1, 1) 400ms;
+}
+.tools_page .nav-tabs li a {
+    color: #fff;
+}
+.tools_page .nav-tabs li a:hover,
+.tools_page .nav-tabs>li.active>a,
+.tools_page .nav-tabs>li.active>a:focus,
+.tools_page .nav-tabs>li.active>a:hover {
+    color: #555 !important;
+}
+#application-center-tab-content .nav-tabs>li.active>a.category,
+#application-center-tab-content .nav-tabs>li.active>a.category:focus,
+#application-center-tab-content .nav-tabs>li.active>a.category:hover {
+    color: white;
+    border-radius: 30px;
+}
+#application-center-tab-content .nav-tabs>li>a.category {
+    color: white;
+    border-radius: 30px;
+}
+div.wpcf7-validation-errors {
+    border: none;
+    background: #ff5555;
+    color: white;
+}
+span.wpcf7-not-valid-tip {
+    color: #ff5555;
+    margin-bottom: 10px;
+}
+.contact_info.contact_form form {
+    text-align: right;
+}
+.contact_info .form-group {
+    margin-bottom: 0;
+    text-align: left;
+}
+.contact_info .form-group .wpcf7-form-control {
+    margin-bottom: 36px;
+}
+.contact_info .form-group .wpcf7-form-control.wpcf7-not-valid {
+    margin-bottom: 6px;
+}
+div.wpcf7-response-output {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.35em 0.5em;
+}
+.contact_info form textarea {
+    color: white;
+    font-size: 20px;
+    font-family: 'Proxima Nova Bold';
+}
+.contact_info form .btn-enzyme {
+    font-family: 'Proxima Nova Regular';
+}
+div.wpcf7 .ajax-loader,
+div.wpcf7 .ajax-loader:after {
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+}
+div.wpcf7 .ajax-loader {
+    background: none;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid #ffffff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.flex-box {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /*
+    	display: grid;
+    	grid-template-columns: repeat(3, 380px);
+    	grid-column-gap: 30px;
+    	grid-row-gap: 30px;
+*/
+    
+    padding-bottom: 30px;
+}
+.enzyme-block {
+    margin-bottom: 0;
+    height: 100%;
+}
+.enzyme-store-row {
+    max-width: 790px;
+    display: block;
+    margin: 0 auto;
+    max-height: none;
+}
+.enzyme-block .enzyme-name {
+    line-height: normal;
+}
+.enzyme-block-wrapper {
+    position: relative;
+    margin-bottom: 35px;
+}
+.enzyme-block+.btn-buy,
+.enzyme-block+.btn-buy+.btn-buy-bg {
+    bottom: -21px;
+    right: 30px;
+}
+.distributors li {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.distributors li>div {
+    width: 50%;
+}
+.distributors li>div:last-child {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    padding-left: 60px;
+}
+.distributors {
+    padding-left: 0;
+}
+.distributors li img {
+    position: relative;
+    left: 0;
+}
+.distributors li h4 {
+    padding-left: 0;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.page-template-tpl_enzyme_individual .faqs .panel-default>.panel-heading a {
+    color: #1d1d1b;
+}
+.contact_icons {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.contact_icons .sprite {
+    margin-left: 0;
+    margin-right: 0;
+}
+.news-modal .modal-content {
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+.news-modal .modal-body {
+    background: white;
+}
+.news-modal .news-header>img {
+    position: absolute;
+    left: 45px;
+    top: 13px;
+}
+.selectric {
+    color: white;
+    font-size: 14px;
+    font-family: 'Proxima Nova Regular';
+    border-color: #1a1a1a;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    background: #869ab5;
+    /*
+      background: #869ab5 url('/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/sprite.png')no-repeat;
+      background-position: right center;
+*/
+}
+.selectric-items ul,
+.selectric-items li {
+    font-size: 14px;
+}
+
+/* .selectric .button{
+      display: none;
+    }*/
+.selectric-hover .selectric,
+.selectric-focus .selectric {
+    border-color: #1a1a1a;
+}
+.selectric .label {
+    color: white;
+    font-size: 14px;
+    font-family: 'Proxima Nova Regular';
+    font-weight: normal;
+    height: auto;
+    padding: 23px 20px;
+    line-height: normal;
+    text-align: left;
+    margin: 0;
+    display: table-cell;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 90%;
+}
+.selectric-items {
+    background: #435a7c;
+    border-color: #1a1a1a;
+    border-top: none;
+}
+.selectric-open .selectric {
+    border-color: #1a1a1a;
+}
+.selectric-items li.highlighted,
+.selectric-items li:hover {
+    background: #869ab5;
+    color: white;
+}
+.selectric-items li {
+    color: white;
+    padding: 15px 20px;
+}
+.selectric .button:after {
+    border: none;
+}
+.selectric .button {
+    height: 100%;
+}
+.enzyme-block {
+    min-width: 380px;
+    margin-right: 15px;
+}
+.selectric {
+    position: relative;
+    /***background: #869ab5 url('/web/20181029050240im_/http://www.kurabiotec.com/wp-content/themes/kura/images/sprite.png') no-repeat;***/
+}
+
+/*
+    .selectric:before{
+        position: absolute;
+        background: url('https://web.archive.org/web/20181029050240im_/https://biobm.com/kura-demo/wp-content/themes/kura/images/sprite.png');
+        width: 20px;
+        height: 11px;
+        top: 5px;
+        right: 5px;
+
+    }
+*/
+.no-validated-methods-message {
+    margin-bottom: 22px;
+}
+.selectric .button {
+    display: block;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+.selectric .button>img {
+    margin-top: 25px;
+    margin-right: 15px;
+}
+#application-center-tab-content {
+    margin-top: 22px;
+}
+#application-center-tab-content .tab-pane {
+    padding-top: 0;
+}
+#application-center-tab-content .selectric {
+    margin-top: 22px;
+}
+.enzyme-block {
+    min-width: 380px;
+    margin-right: 15px;
+}
+.enzyme-store-row {
+    max-height: none;
+    max-width: 820px;
+    width: 100%;
+    height: 579px;
+}
+#menu-accordion .panel-default>.panel-heading a::after {
+    top: unset;
+    bottom: 5px;
+}
+.news-modal .team_image {
+    position: absolute;
+    left: 45px;
+    top: 13px;
+}
+.news-modal .close {
+    float: left;
+    background-color: white;
+    padding: 5px;
+    opacity: 1;
+}
+.news-modal .modal-header {
+    border: none;
+}
+.news-modal .modal-body {
+    background-color: white;
+    top: 170px;
+    left: 20%;
+}
+.news-modal .modal-content {
+    width: 80%;
+}
+#fp-nav ul li .fp-tooltip.right {
+    width: 130px;
+}
+.tools .tool_table .tablepress tr.even td.dataTables_empty {
+    color: white;
+}
+#fp-nav ul li .fp-tooltip {
+    white-space: normal;
+}
+.tools .faqs .mCustomScrollbar {
+    width: 100%;
+}
+.faqs .panel-group .panel {
+    margin-left: 0;
+    margin-right: 0;
+}
+.tools .tool_table .mCustomScrollbar {
+    max-width: 1042px;
+}
+.tools_page .nav-tabs li a {
+    font-size: 20px;
+    font-family: 'Proxima Nova Bold';
+    background: white;
+    color: #1d1d1d;
+    border-radius: 0;
+    border: none;
+}
+.faqs .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    font-size: 16px;
+}
+.tools_page .nav-tabs>li.active>a,
+.tools_page .nav-tabs>li.active>a:focus,
+.tools_page .nav-tabs>li.active>a:hover,
+.tools_page .nav-tabs li a:hover {
+    border-radius: 0;
+    color: white !important;
+    background: #435a7c;
+    border: none;
+}
+.msds .panel-group {
+    margin-left: 15px;
+}
+#kura-navbar {
+    overflow: hidden;
+}
+#menu-accordion {
+    height: 470px;
+}
+.enzyme_store_page #kura-navbar .mCSB_scrollTools .mCSB_draggerRail,
+.about_page #kura-navbar .mCSB_scrollTools .mCSB_draggerRail,
+#kura-navbar .mCSB_scrollTools .mCSB_draggerRail {
+    width: 8px;
+    background-color: #8698b3;
+    border-radius: 0;
+    height: 100%;
+}
+.enzyme_store_page #kura-navbar .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar .about_page #kura-navbar .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+#kura-navbar .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: white;
+    width: 8px;
+    border-radius: 0;
+    height: 100%;
+}
+#kura-navbar.white-bg .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: rgb(67, 90, 124);
+}
+.news_content figcaption {
+    font-size: 24px;
+}
+.news_content {
+    margin-bottom: 0;
+}
+.news ul {
+    /*
+      display: grid;
+      grid-template-columns: repeat(3, 415px);
+      grid-column-gap: 60px;
+      grid-row-gap: 45px;
+*/
+    
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+.news li {
+    width: calc(50% - 60px);
+    margin-right: 60px;
+}
+.news li {
+    margin-left: 0;
+}
+.news .mCustomScrollbar.horizontal_scrollbar {
+    height: auto;
+}
+
+/*
+    @media(min-width: 992px) and (max-width: 1199px){
+        .enzyme-store-row{
+            max-width: 630px;
+        }
+    }
+*/
+.page-template-tpl_enzyme_individual .faqs .panel-default>.panel-heading a[aria-expanded="true"] {
+    color: white;
+    background: #1d1d1b;
+}
+.h-75 {
+    height: 75%;
+}
+.page-template-tpl_enzyme_individual .nav-tabs>li.active>a.category {
+    color: white;
+    background: #1d1d1b;
+}
+.tools .tool_table .mCustomScrollbar {
+    max-width: unset;
+    width: 100%;
+}
+.tools .tool_table .tablepress {
+    border-spacing: 10px 10px;
+}
+.table-caption {
+    color: white;
+    background: white;
+    color: black;
+    padding: 10px;
+}
+.white-bg #copyright-info {
+    color: rgb(67, 90, 124);
+}
+.section#section0 {
+    background-position: left center;
+    background-size: cover, cover;
+}
+#kura-navbar .menu_icon figcaption {
+    color: #d2d2d4;
+}
+.mCS-kura-scroll-blue-bg.mCSB_scrollTools .mCSB_draggerRail {
+    width: 8px;
+    background-color: #8698b3;
+    border-radius: 0;
+}
+.mCS-kura-scroll-blue-bg.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #ffffff;
+    width: 8px;
+    border-radius: 0;
+}
+.mCS-kura-scroll-blue-bg.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover,
+.mCS-kura-scroll-blue-bg.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:focus {
+    background-color: #ffffff;
+    border-radius: 0;
+}
+.enzyme-selector-container .also-suitable-wrapper .enzyme-block .enzyme-name {
+    font-size: 20px;
+}
+.enzyme-selector-container .recommended-enzyme .also-suitable .enzyme-name {
+    font-size: 24px;
+}
+#fp-nav ul li .fp-tooltip {
+    opacity: 1;
+}
+.also-suitable-wrapper .gutter-6 {
+    display: none;
+}
+.also-suitable-wrapper .enzyme-block {
+    cursor: pointer;
+    display: block;
+}
+.enzyme-name {
+    line-height: normal;
+}
+.enzyme-selector-container .recommended-enzyme .also-suitable {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: default;
+}
+.enzyme-selector-container .also-suitable-wrapper .enzyme-block {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+loader,
+loader:after {
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+}
+.loader {
+    background: none;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid #ffffff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    /*
+    	-webkit-animation: load8 1.1s infinite cubic-bezier(.55,0,.1,1) 0.4s;
+    	animation: load8 1.1s infinite cubic-bezier(.55,0,.1,1) 0.4s;
+*/
+    /*
+        -webkit-animation: load8 1.1s infinite ease 0.4s;
+    	animation: load8 1.1s infinite ease 0.4s;
+*/
+    
+    animation-name: load8;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin-left: 10px;
+    margin-top: 2px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+html {
+    overflow: hidden;
+}
+@media(min-width: 992px) and (max-width: 1199px) {
+    .conference_img {
+        height: 100px;
+    }
+    
+    .conference_img>img {
+        max-height: 100%;
+        width: auto;
+    }
+    
+    .social_image>img {
+        width: 100%;
+    }
+}
+#black-out {
+    background: #435a7c;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /*    transform: translateX(-100%);*/
+    
+    z-index: 1051;
+    /*
+    -webkit-transition: all ease 0.7s;
+    transition: all ease 0.7s;
+*/
+    
+    opacity: 1;
+}
+.slide-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Proxima Nova Bold';
+    color: #1d1d1b;
+    text-align: center;
+}
+.contact_info.contact_form label {
+    color: #b3c9eb;
+    text-transform: uppercase;
+}
+.contact_info h6 {
+    color: #b3c9eb;
+    text-transform: uppercase;
+}
+.alert {
+    border-radius: 0;
+}
+.contact_info form input,
+.contact_info form textarea {
+    margin-bottom: 36px;
+}
+.contact_info form input[type="submit"] {
+    margin-bottom: 0;
+}
+.slider-tooltip {
+    transform: translate(-50%, -30px);
+    position: absolute;
+    color: #8698b3;
+}
+.fp-slidesNav.white-nav-dots ul li a.active .slider-tooltip {
+    color: white;
+}
+.fp-slidesNav.white-nav-dots ul li a:hover .slider-tooltip {
+    color: white;
+}
+#section1 .fp-slidesNav.white-nav-dots ul li a:hover .slider-tooltip {
+    color: #435a7c;
+}
+#section1 .fp-slidesNav ul li a.active .slider-tooltip {
+    color: #435a7c;
+}
+.history .fp-controlArrow.fp-next {
+    right: 55px;
+}
+.history .fp-controlArrow.fp-prev {
+    left:
+}
+
+/* Media Query for mobile devices*/
+@media (min-width: 320px) and (max-width: 767px) {
+    .application_center_page .fp-slidesNav ul li {
+        padding: 3px 50px !important;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {}
+
+/* Media Query for mobile devices*/
+@media (max-width: 767px) {
+    .shopify-buy-frame {
+        height: 100%;
+        overflow-y: auto;
+    }
+    .shopify-buy-frame.shopify-buy-frame--toggle.is-sticky.is-active{
+        height: auto;
+    }
+    
+    .height-hundred-container {
+        height: calc(100% - 100px);
+        margin-top: 15px;
+    }
+    
+    .height-hundred {
+        height: 100%;
+    }
+    
+    .team_carousel {
+        height: calc(100% - 60px);
+    }
+    
+    .fp-slidesNav.bottom {
+        bottom: 35px;
+    }
+    
+    .team_carousel li {
+        margin-bottom: 50px;
+    }
+    
+    .team_modal .modal-body,
+    .advisors_modal .modal-body {
+        height: auto;
+    }
+    
+    .team figcaption {
+        font-size: 16px;
+    }
+    
+    .team figcaption span {
+        font-size: 14px;
+    }
+    
+    #contact-btn {
+        display: none;
+    }
+    
+    .news-modal .modal-header {
+        padding-left: 0;
+    }
+    
+    .enzyme-block-wrapper {
+        margin-bottom: 0;
+    }
+    
+    .enzyme-store-row {
+        height: auto;
+    }
+    /*
+    	.fp-scrollable{
+    		transform: translateY(70px);
+    	}
+*/
+    
+    .fp-scroller {
+        padding-bottom: 70px;
+    }
+    
+    #menu-accordion {
+        margin-top: 90px;
+    }
+    
+    #kura-navbar {
+        width: 100%;
+        overflow-y: auto;
+    }
+    
+    .menu {
+        top: 15px;
+        width: 100%;
+        left: 0px;
+        margin-left: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #fp-nav.right,
+    .pageTitle {
+        display: none;
+    }
+    
+    .menu .logo {
+        margin-bottom: 0;
+        float: right;
+        width: auto;
+    }
+    
+    .logo img {
+        height: 40px;
+        width: auto;
+    }
+    
+    h2.bannerHeader {
+        font-size: 24px;
+        margin: 15px 30px;
+    }
+    
+    #bannerP {
+        font-size: 16px;
+        margin: 15px 30px;
+    }
+    
+    .btn-enzyme {
+        margin-top: 36px;
+        font-size: 18px;
+        padding: 10px 30px;
+    }
+    /*footer arrow*/
+    
+    footer.arrow {
+        bottom: 6px;
+    }
+    /*contact page*/
+    
+    .distributors {
+        margin: 0 auto;
+        max-width: 294px;
+    }
+    
+    .distributors li img {
+        left: -15px;
+    }
+    
+    .distributors li h4 {
+        padding-left: 160px;
+    }
+    /*** country modal ***/
+    
+    #country-modal .modal-dialog {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .videoplayer {
+        width: 90%;
+        margin: 10px auto;
+    }
+    
+    .team_carousel li {
+        margin-bottom: 30px;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    
+    .history .slide-component h1 {
+        font-size: 135px;
+    }
+    
+    .history .slide-component h1 {
+        top: 0;
+    }
+    
+    .history .slide-component p {
+        bottom: 15px;
+    }
+    
+    .about_page #section2 .fp-slidesNav.bottom {
+        bottom: 30px;
+    }
+    
+    .about_page #section2 .fp-slidesNav.bottom li {
+        padding: 3px 18px;
+    }
+    
+    .about_page #section2 .fp-slidesNav.bottom li:after {
+        left: 20px;
+    }
+    
+    .fp-slidesNav.bottom ul:after {
+        width: 62%;
+    }
+    
+    #section1 .team_advisors li:nth-child(2n) {
+        margin-left: 0px;
+    }
+    
+    #section1 .team_visit li:nth-child(2n) {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    
+    .team_visit li {
+        margin: 0 0 20px 0;
+    }
+    
+    .fp-slidesNav ul li {
+        padding: 3px 40px;
+    }
+    
+    .about_page #section1 .fp-slidesNav.bottom ul:after {
+        width: 50%;
+    }
+    
+    .about_page #section2 .fp-slidesNav.bottom ul:after {
+        width: 80%;
+    }
+    
+    .application_center_page #section0 .fp-slidesNav.bottom ul:after {
+        width: 78%;
+    }
+    
+    .application_center_page .overview-slide {
+        margin: 0 25px;
+    }
+    
+    .awards .media-body h4.media-heading {
+        font-size: 16px;
+    }
+    
+    .awards .media-body p {
+        font-size: 12px;
+    }
+    
+    .fp-controlArrow.fp-prev,
+    .fp-controlArrow.fp-next {
+        display: none;
+    }
+    /*tools and information page*/
+    
+    .retest {
+        height: 380px !important;
+    }
+    
+    .retest .mCSB_inside>.mCSB_container {
+        margin-right: 20px;
+    }
+    
+    .retest {
+        width: 100% !important;
+    }
+    
+    .msds .vertical-scroll .mCSB_inside>.mCSB_container {
+        margin-right: 0;
+    }
+    
+    .msds .panel-body ul {
+        padding: 15px;
+    }
+    
+    .msds .panel-body li {
+        width: 100%;
+    }
+    
+    .msds .panel-default>.panel-heading+.panel-collapse>.panel-body {
+        padding: 0;
+        padding-top: 15px;
+    }
+    
+    .msds .panel-group {
+        margin-left: 15px;
+        margin-right: 30px;
+    }
+    
+    .msds .vertical-scroll .mCSB_scrollTools {
+        right: 7px;
+    }
+    
+    .faqs .panel-default>.panel-heading a[aria-expanded="true"] {
+        margin-top: 60px;
+    }
+    
+    .faqs .panel-default>.panel-heading a {
+        font-size: 14px;
+        padding-left: 30px;
+    }
+    
+    .faqs .panel-group {
+        margin-bottom: 0;
+    }
+    
+    .faqs .panel-default>.panel-heading+.panel-collapse>.panel-body p {
+        font-size: 12px;
+    }
+    
+    .faqs .panel-group .panel {
+        margin: 5px 15px;
+        margin: 15px 0px;
+    }
+    
+    .msds .vertical-scroll {
+        height: 198px;
+    }
+    
+    .msds .panel-group .panel {
+        margin-bottom: 10px;
+    }
+    
+    .panel-default>.panel-heading {
+        padding: 2px;
+    }
+    
+    .msds .panel-heading h4 {
+        padding-left: 70px;
+    }
+    
+    .panel-default>.panel-heading a {
+        padding: 8px;
+    }
+    
+    .msds .panel-title a div {
+        top: 4px;
+    }
+    
+    .tools .tool_table .tablepress {
+        border-spacing: 10px;
+    }
+    
+    .tools .tool_table .tablepress td,
+    .tools .tool_table .tablepress th {
+        padding: 2px 10px;
+    }
+    
+    .conference_img {
+        height: 60px;
+    }
+    
+    .conference_img>img {
+        max-height: 100%;
+        width: auto;
+    }
+    
+    .conference p {
+        margin-bottom: 0;
+    }
+    
+    .bannerHeader,
+    .awards .media-heading,
+    .award_modal .modal-title,
+    .distributors li h4 {
+        font-size: 20px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .contact_info p,
+    .contact_info form input {
+        font-size: 16px;
+    }
+    
+    .conference {
+        max-width: 349px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    
+    .distributors {
+        max-width: 410px;
+    }
+    
+    .conference {
+        min-height: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .tools .tool_table .tablepress td,
+    .tools .tool_table .tablepress th {
+        padding: 2px 4px;
+        font-size: 13px;
+    }
+    
+    .tools .tool_table .tablepress {
+        border-spacing: 2px;
+    }
+    
+    .news-modal .modal-body {
+        left: 0;
+    }
+    
+    .news-modal .team_image {
+        left: 0;
+        top: 44px;
+    }
+    
+    .news-modal .modal-content {
+        width: 100%;
+    }
+    
+    .news_content img {
+        height: auto;
+    }
+    
+    .news .horizontal_scrollbar {
+        margin-left: 0;
+        overflow-x: unset;
+    }
+    
+    .news ul {
+        display: block;
+        padding-left: 0;
+        max-width: 415px;
+        margin: 0 auto;
+    }
+    
+    .news li {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .news_content figcaption {
+        font-size: 20px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        font-size: 16px;
+    }
+    
+    .history .slide-component p {
+        font-size: 20px;
+        line-height: normal;
+    }
+    
+    .pdf-block-wrapper .col-sm-4 {
+        width: 50%;
+    }
+    
+    .application_center_page h4 {
+        font-size: 20px;
+    }
+    
+    .select-block {
+        font-size: 20px;
+        min-height: unset;
+        height: 100px;
+    }
+    
+    .faqs .panel-default>.panel-heading a[aria-expanded="true"] {
+        margin-top: 0;
+    }
+    
+    .tools_page .nav-tabs li a {
+        font-size: 16px;
+    }
+    
+    .conference {
+        min-height: none;
+        padding-bottom: 10px;
+    }
+    
+    .distributors li h4 {
+        padding-left: 0;
+    }
+    
+    .tools .mCustomScrollbar {
+        width: 100%;
+    }
+    
+    .faqs .panel-group .panel {
+        /*
+            margin-left: 15px;
+            margin-right: 15px;
+*/
+    }
+    
+    .enzyme_selector_page h4 {
+        font-size: 20px;
+    }
+    
+    .page-template-tpl_page-php .page #fullpage h4 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    
+    #bannerP {
+        line-height: normal;
+    }
+    
+    .enzyme-block .enzyme-name {
+        font-size: 18px;
+    }
+    
+    .enzyme-block .short-description,
+    .enzyme-block .temperature {
+        font-size: 14px;
+    }
+    
+    .flex-box {
+        display: block;
+        padding-bottom: 0;
+    }
+    
+    .enzyme-block {
+        min-width: unset;
+        width: 100%;
+        padding: 25px 15px;
+        margin-bottom: 30px;
+    }
+    
+    .enzyme-block+.btn-buy,
+    .enzyme-block+.btn-buy+.btn-buy-bg {
+        bottom: 15px;
+        right: 15px;
+        font-size: 16px;
+        padding: 4px 0;
+        width: 80px;
+        height: 32px;
+    }
+    
+    .team_image {
+        width: 100%
+    }
+    
+    .team_image>img {
+        width: 100%;
+    }
+    
+    .enzyme-selector-container .col-sm-6>label {
+        margin-top: 15px;
+    }
+    
+    .coming-soon {
+        font-size: 20px;
+    }
+    
+    .social_image>img {
+        width: 100%;
+    }
+    
+    .social_image {
+        position: relative;
+        margin-left: 0;
+        margin-top: 0;
+        z-index: 0;
+    }
+    
+    .section#section0 {
+        background-position: center center;
+        background-size: 0, cover;
+    }
+    
+    #menu_sprite {
+        background-position: 0 -118px;
+    }
+    
+    .menu_icon figcaption {
+        color: #1d1d1b;
+    }
+    
+    .page-template-tpl_page .menu_icon figcaption,
+    .page-template-tpl_enzyme_individual .menu_icon figcaption,
+    .page-template-tpl_contact .menu_icon figcaption,
+    page-template-tpl_tools .menu_icon figcaption,
+    .page-template-tpl_tools .menu_icon figcaption {
+        color: white;
+    }
+    
+    .home_page>.menu>.logo {
+        opacity: 1;
+    }
+    
+    .page-template-tpl_page #menu_sprite,
+    .page-template-tpl_enzyme_individual #menu_sprite,
+    .page-template-tpl_contact #menu_sprite,
+    page-template-tpl_tools #menu_sprite,
+    .page-template-tpl_tools #menu_sprite {
+        background-position: -75px -34px;
+    }
+    
+    .overview-slides p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    .overview-slide {
+        padding: 15px;
+    }
+    
+    .overview-slide ul li {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    .faqs .panel-default>.panel-heading+.panel-collapse>.panel-body {
+        font-size: 13px;
+    }
+}
+@media(max-width: 575px) {
+    /*home page*/
+    
+    h2.bannerHeader {
+        font-size: 20px;
+        margin: 15px 30px;
+    }
+    
+    #bannerP {
+        font-size: 14px;
+        margin: 15px 30px;
+    }
+    
+    .btn-enzyme {
+        margin-top: 20px;
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+    
+    .conference {
+        padding: 1px;
+        /*    		min-height: 280px;*/
+        min-height: none;
+        margin: 15px;
+    }
+    
+    .distributors li img {
+        left: -26px;
+    }
+    
+    .distributors li h4 {
+        padding-left: 00px;
+    }
+}
+
+/* Media Query for ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .news_content figcaption {
+        font-size: 13px;
+    }
+    
+    #fp-nav ul li .fp-tooltip {
+        font-size: 12px;
+    }
+    
+    .menu {
+        left: 15px;
+    }
+    /*home page*/
+    
+    h2.bannerHeader {
+        font-size: 26px;
+        margin: 15px 30px;
+    }
+    /*footer arrow*/
+    
+    .footer.arrow {
+        bottom: 6px;
+    }
+    
+    .about_page #section1 .fp-slidesNav.bottom ul:after {
+        width: 46% !important;
+    }
+    
+    .about_page #section2 .fp-slidesNav.bottom ul:after {
+        width: 56% !important;
+    }
+    
+    .application_center_page #section0 .fp-slidesNav ul li {
+        padding: 3px 55px;
+    }
+    
+    #fp-nav ul {
+        height: 80% !important;
+    }
+    
+    #fp-nav {
+        margin-top: -65px !important;
+    }
+    
+    #fp-nav.right {
+        left: 30px !important;
+        height: 330px;
+    }
+    
+    .conference_img {
+        height: 80px;
+        margin: 0;
+    }
+    
+    .conference_img>img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    
+    .conference p {
+        margin-bottom: 0;
+    }
+    
+    .conference h4 {
+        margin-top: 10px;
+    }
+    
+    .conference {
+        min-height: 230px;
+    }
+    
+    .fp-controlArrow.fp-prev,
+    .fp-controlArrow.fp-next {
+        display: none;
+    }
+    
+    .team_carousel li {
+        margin-left: 0px;
+    }
+    
+    .team_visit li {
+        margin-right: 15px;
+    }
+    
+    .awards .media-body h4 {
+        font-size: 20px;
+    }
+    
+    .list-row>.col-sm-12 {
+        padding-left: 130px;
+    }
+    
+    .contactContent .col-md-8 {
+        padding-left: 130px;
+    }
+    
+    .select-block {
+        min-height: unset;
+        height: 220px;
+        font-size: 20px;
+    }
+}
+@media(max-width: 1199px) {
+    .enzyme-store-row {
+        max-width: 412px;
+    }
+}
+@media(min-width: 1200px) {
+    .table-caption {
+        /*        position: absolute;*/
+        /*
+            margin-bottom: -25px;
+            width: 60%;
+            left: 25px;
+*/
+        width: calc(100% - 260px);
+        float: left;
+        margin-left: 10px;
+    }
+}
+@media(min-width: 992px) and (max-width: 1199px) {
+    .table-caption {
+        width: 53%;
+        /*            position: absolute;*/
+        margin-bottom: -25px;
+        left: 25px;
+    }
+    
+    .social_image {
+        margin-left: -40%;
+    }
+    
+    .news_content figcaption {
+        font-size: 16px;
+    }
+}
+
+/* ipad style*/
+@media(min-width: 768px) and (max-width: 1024px) {
+    .faqs .col-md-4 {
+        width: 70%;
+        margin: 0px 15%;
+    }
+    
+    .msds .vertical-scroll {
+        width: 90%;
+    }
+}
+
+/*Laptop size*/
+@media(min-width: 1200px) and (max-width: 1400px) {
+    .about_page #section1 .fp-slidesNav.bottom ul:after {
+        width: 38% !important;
+    }
+    
+    .about_page #section2 .fp-slidesNav.bottom ul:after {
+        width: 45% !important;
+    }
+    
+    .application_center_page #section0 .fp-slidesNav.bottom ul:after {
+        width: 35%;
+    }
+    
+    .application_center_page #section0 .fp-slidesNav ul li {
+        padding: 3px 55px;
+    }
+    
+    #fp-nav {
+        margin-top: -95px !important;
+    }
+    
+    .news_content figcaption {
+        font-size: 20px;
+    }
+    
+    .history .slide-component h1 {
+        font-size: 260px;
+    }
+    
+    .history .fp-controlArrow.fp-next {
+        right: -45px;
+    }
+    
+    .history .fp-controlArrow.fp-prev {
+        left: -45px;
+    }
+}
+.news_content img {
+    height: auto;
+}
+#contact-btn {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    padding: 5px 15px;
+    color: white;
+    background: #4f95fc;
+    background: #fc4f4f;
+    border-radius: 15px;
+    display: inline-block;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 16px;
+}
+#contact-btn:hover {
+    background: #5876a2;
+    background: #ed4747;
+}
+#audit-btn {
+    position: fixed;
+    right: 115px;
+    bottom: 15px;
+    padding: 5px 15px;
+    color: white;
+    background: #4f95fc;
+    background: #fc4f4f;
+    border-radius: 15px;
+    display: inline-block;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 16px;
+}
+#audit-btn:hover {
+    background: #5876a2;
+    background: #ed4747;
+}
+#always-present-contact-modal input.form-control {
+    box-shadow: none;
+    border-radius: 0;
+    border-color: #1d1d1b;
+    font-size: 20px;
+    font-family: 'Proxima Nova Bold';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #1d1d1b;
+}
+#always-present-contact-modal .modal-content {
+    border-radius: 0;
+    box-shadow: none;
+}
+#always-present-contact-modal .btn-enzyme {
+    width: 100%;
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-top: 15px;
+}
+#always-present-contact-modal .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+}
+div.wpcf7 .ajax-loader {
+    position: absolute;
+}
+.application_center_page #section1 .fp-scroller {
+    height: 100%;
+}
+.social_image>img {
+    width: 100%;
+    height: auto;
+}
+#always-present-contact-modal .modal-content .modal-header {
+    border: none;
+    padding-top: 21px;
+    padding-bottom: 0;
+}
+#always-present-contact-modal .modal-content .modal-header h4 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    font-family: 'Proxima Nova Bold';
+    letter-spacing: -1.3px;
+    line-height: normal;
+}
+.team_carousel .slide-title {
+    margin-bottom: 30px;
+}
+.selectric-items .disabled {
+    display: none;
+}
+@media(max-width: 767px) {
+    .team_carousel .slide-title {
+        margin-top: 25px;
+    }
+    
+    .team_carousel .team_members .team figcaption {
+        width: 110%;
+    }
+    
+    .team_carousel ul {
+        padding: 0 60px;
+    }
+    
+    #contact-btn {
+        right: 5px;
+        bottom: 5px;
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    #audit-btn {
+        left: 5px;
+        right: unset;
+        bottom: 5px;
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
+.about_page .menu .logo {
+    display: none;
+}
+.about_page #kura-navbar .menu .logo {
+    display: block;
+}
+.page-not-found {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 30px);
+}
+.distributors li {
+    justify-content: space-between;
+}
+.contact_info.contact_form #checkboxes label {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    cursor: pointer;
+}
+.contact_info.contact_form #checkboxes label .form-control {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+.header {
+    font-size: 24px;
+    color: white;
+    font-family: 'Proxima Nova Bold';
+    text-align: left;
+}
+.contact_info.contact_form a:hover {
+    color: #337ab7;
+    text-decoration: none;
+}
+table.white-table {
+    color: white;
+}
+table.white-table {
+    /* border: 1px solid white; */
+    
+    width: 100%;
+}
+table.white-table th,
+table.white-table td {
+    padding: 10px;
+    border: 1px solid white;
+}
+.page-template-tpl_enzyme_individual #section2 .col-md-10.col-md-offset-2.col-sm-8.col-sm-offset-2 {
+    /* background: white; */
+    
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.contact_info form .btn-enzyme {
+    width: auto;
+    float: left;
+}
+.contact_info form input.btn-enzyme[value="Next"] {
+    float: none;
+}
+.tools #section0 .contact_info.contact_form {
+    margin-bottom: 30px;
+}
+.shopify-buy-frame--product.shopify-buy__layout-horizontal {
+    background: white;
+    padding: 15px;
+}
+.btn-enzyme-link {
+    text-align: center;
+}
+.contact_info.contact_form a.btn-enzyme-link:hover {
+    color: white;
+}
+#start-audit {
+    background: #4f95fc !important;
+}
+#save-time-table tr>td:last-child,
+#save-time-table tr>th:last-child {
+    background: white;
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+#save-time-table tr:last-child>td:last-child {
+    border-bottom: inherit;
+}
+.contact_info.contact_form label#time-savings {
+    color: #4f95fc;
+    font-weight: bold;
+    background: white;
+    padding: 0 15px;
+    display: inline-block;
+}
+.contact_info.contact_form label#time-savings h3 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.page-template-tpl_quizlanding .contact_form {
+    margin-bottom: 60px;
+}
